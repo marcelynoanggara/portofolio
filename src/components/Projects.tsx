@@ -16,6 +16,15 @@ const projects = [
     tech: ['React', 'TypeScript'],
     url: 'https://marcelynoanggara.github.io/qr-generator/',
   },
+
+  {
+    number: '03',
+    title: 'AI Data Analyze',
+    description:
+      'CSV data analysis web application that utilizes AI to provide insights and visualizations for better decision-making.',
+    tech: ['Python', 'TypeScript'],
+    url: 'https://data-analyze-doy73sy5q-mangga2.vercel.app/',
+  },
 ]
 
 function Projects() {

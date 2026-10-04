@@ -1,5 +1,6 @@
 import Reveal from './Reveal'
 import { profile } from '../data/portfolio'
+import { profileImg } from '../assets/profile'
 
 const facts = ['2nd year IT student', '7 GitHub repositories', 'React • Golang • C++ • Python']
 
@@ -45,14 +46,17 @@ function About() {
         </Reveal>
 
         <Reveal delayMs={120}>
-          {/* Polaroid-style identity card (no photo yet — monogram placeholder) */}
+          {/* Polaroid-style identity card */}
           <div className="mx-auto w-full max-w-sm rotate-3 rounded-[4px] bg-white p-3 pb-5 shadow-2xl shadow-black/50 transition duration-500 hover:rotate-0">
-            <div className="flex aspect-[4/5] flex-col items-center justify-center rounded-[2px] bg-gradient-to-b from-[#0e2230] to-[#07181f]">
-              <span className="font-serif text-7xl text-white">{profile.initials}</span>
-              <span className="mt-4 rounded-full border border-[#8fe388]/30 bg-[#10261c] px-3.5 py-1.5 text-[11px] font-medium text-white/85">
+            <div className="relative">
+              <img
+                src={profileImg}
+                alt={profile.name}
+                className="aspect-[4/5] w-full rounded-[2px] bg-white object-cover object-[center_12%]"
+              />
+              <span className="absolute bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-[#8fe388]/30 bg-[#07181f]/90 px-3.5 py-1.5 text-[11px] font-medium text-white/85">
                 IT Student • Builder
               </span>
-              <div className="dot-grid mt-6 h-16 w-40 opacity-50" aria-hidden="true" />
             </div>
             <p className="mt-4 text-center font-serif text-xl text-neutral-900">{profile.name}</p>
             <p className="mt-1 text-center text-xs text-neutral-500">{profile.university}</p>

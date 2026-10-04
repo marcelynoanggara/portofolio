@@ -1,4 +1,5 @@
 import { profile, techMarquee } from '../data/portfolio'
+import { profileImg } from '../assets/profile'
 
 function Hero() {
   const marquee = [...techMarquee, ...techMarquee]
@@ -16,9 +17,13 @@ function Hero() {
       </div>
 
       <div className="relative mx-auto w-full max-w-4xl text-center">
-        {/* Avatar monogram */}
-        <div className="animate-float mx-auto flex h-[110px] w-[110px] items-center justify-center rounded-full border border-[#8fe388]/30 bg-gradient-to-b from-[#0e2230] to-[#07181f] shadow-[0_0_60px_rgba(62,213,152,0.25)]">
-          <span className="font-serif text-4xl text-white">{profile.initials}</span>
+        {/* Avatar image */}
+        <div className="animate-float mx-auto h-[110px] w-[110px] overflow-hidden rounded-full border border-[#8fe388]/30 bg-white shadow-[0_0_60px_rgba(62,213,152,0.25)]">
+          <img
+            src={profileImg}
+            alt={profile.name}
+            className="h-full w-full object-cover object-[center_18%]"
+          />
         </div>
 
         {/* Availability badge */}

@@ -1,32 +1,37 @@
-# React + TypeScript + Vite
+# Marcelyno Anggara — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Personal portfolio of **Marcelyno Anggara**, an Information Technology student at
+Telkom University Surabaya. Rebuilt with a dark, playful, premium design inspired
+by modern Framer portfolio templates.
 
-Currently, two official plugins are available:
+Live site: https://marcelynoanggara.github.io/portofolio/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
+- React 19 + TypeScript
+- Vite
+- Tailwind CSS 4
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Sections
 
-## Expanding the Oxlint configuration
+Pill navigation, hero with availability badge and tech marquee, sticky-stacking
+featured projects, tilted marquee ribbon, learning notes, services/skills bento,
+working-principles marquee, about with identity card, FAQ with contact CTA, and
+a sticker footer.
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Develop
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm ci
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Build & deploy
+
+```bash
+npm run build
+```
+
+Pushing to `main` triggers the GitHub Actions workflow in
+`.github/workflows/deploy.yml`, which builds the site and deploys it to
+GitHub Pages.

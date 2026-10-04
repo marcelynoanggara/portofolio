@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Instrument Serif", "Playfair Display", Georgia, serif;
+  --color-ink: #07181f;
+  --color-panel: #0a1b21;
+  --color-panel2: #0e2230;
+  --color-mist: #9fb3ba;
+  --color-mint: #8fe388;
+  --color-mint2: #3ed598;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -7,7 +18,66 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background: #0a0a0a;
+  background: #07181f;
   color: #ffffff;
-  font-family: Inter, system-ui, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #8fe388;
+  color: #07181f;
+}
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s ease-out,
+    transform 0.7s ease-out;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Marquees */
+@keyframes marquee-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee-x 32s linear infinite;
+}
+.animate-marquee-slow {
+  animation: marquee-x 55s linear infinite;
+}
+.marquee-paused:hover .animate-marquee,
+.marquee-paused:hover .animate-marquee-slow {
+  animation-play-state: paused;
+}
+
+/* Hero float */
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.animate-float {
+  animation: float-soft 5s ease-in-out infinite;
+}
+
+/* Subtle grain / dots */
+.dot-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 22px 22px;
 }

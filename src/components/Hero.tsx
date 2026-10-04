@@ -1,46 +1,77 @@
+import { profile, techMarquee } from '../data/portfolio'
+
 function Hero() {
+  const marquee = [...techMarquee, ...techMarquee]
+
   return (
-    <section
-      id="home"
-      className="relative flex min-h-screen items-center overflow-hidden px-6 pt-20"
-    >
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/[0.03] blur-3xl" />
+    <section id="home" className="relative overflow-hidden px-6 pb-16 pt-36 md:pt-40">
+      {/* Glow + concentric rings */}
+      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+        <div className="absolute left-1/2 top-24 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-[#3ed598]/10 blur-3xl" />
+        <div className="absolute left-1/2 top-16 h-72 w-72 -translate-x-1/2 rounded-full border border-white/[0.06]" />
+        <div className="absolute left-1/2 top-6 h-96 w-96 -translate-x-1/2 rounded-full border border-white/[0.04]" />
+        <div className="dot-grid absolute inset-x-0 bottom-0 h-40 opacity-40 [mask-image:linear-gradient(to_top,black,transparent)]" />
+        <span className="absolute right-[18%] top-40 text-[#8fe388]">✦</span>
+        <span className="absolute left-[16%] top-64 text-sm text-[#8fe388]/60">✦</span>
       </div>
 
-      <div className="mx-auto w-full max-w-6xl">
-        <p className="mb-5 text-sm font-medium uppercase tracking-[0.3em] text-neutral-500">
-          INFORMATION TECHNOLOGY STUDENT
-        </p>
+      <div className="relative mx-auto w-full max-w-4xl text-center">
+        {/* Avatar monogram */}
+        <div className="animate-float mx-auto flex h-[110px] w-[110px] items-center justify-center rounded-full border border-[#8fe388]/30 bg-gradient-to-b from-[#0e2230] to-[#07181f] shadow-[0_0_60px_rgba(62,213,152,0.25)]">
+          <span className="font-serif text-4xl text-white">{profile.initials}</span>
+        </div>
 
-        <h1 className="max-w-4xl text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
-          Building things,
+        {/* Availability badge */}
+        <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-[#8fe388]/25 bg-[#10261c] px-4 py-2 text-[13px] font-medium text-white/85">
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#7ee787] opacity-60" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-[#7ee787]" />
+          </span>
+          Open to learning &amp; collaboration
+        </div>
+
+        <h1 className="mt-8 font-serif text-[42px] font-medium leading-[1.08] tracking-tight text-white sm:text-6xl md:text-7xl">
+          {profile.headlineA}
           <br />
-          learning technology.
+          {profile.headlineB}
+          <span className="ml-2 align-top text-3xl text-[#8fe388] md:text-4xl">✦</span>
         </h1>
 
-        <p className="mt-7 max-w-xl text-base leading-7 text-neutral-400 md:text-lg">
-          Information Technology student at Telkom University
-          Surabaya, exploring technology and building digital
-          projects.
+        <p className="mx-auto mt-7 max-w-2xl text-base leading-7 text-[#9fb3ba] md:text-lg md:leading-8">
+          {profile.intro}
         </p>
 
-        <div className="mt-9 flex flex-wrap gap-4">
+        <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
           <a
-            href="#projects"
-            className="rounded-lg bg-white px-6 py-3 text-sm font-medium text-black transition duration-200 hover:bg-neutral-200"
+            href="#contact"
+            className="rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-black transition duration-300 hover:-translate-y-0.5 hover:bg-[#8fe388]"
           >
-            View Projects
+            Let&apos;s talk
           </a>
+          <a
+            href="#works"
+            className="rounded-full border border-white/30 px-7 py-3.5 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/60 hover:bg-white/5"
+          >
+            View my work
+          </a>
+        </div>
 
-          <a
-            href="https://github.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-lg border border-white/15 px-6 py-3 text-sm font-medium transition duration-200 hover:border-white/30 hover:bg-white/5"
-          >
-            GitHub
-          </a>
+        <p className="mt-14 text-[11px] font-bold uppercase tracking-[0.18em] text-[#8fe388]">
+          Currently exploring
+        </p>
+      </div>
+
+      {/* Tech marquee */}
+      <div className="marquee-paused relative mt-6 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
+        <div className="animate-marquee flex w-max items-center gap-12 pr-12">
+          {marquee.map((t, i) => (
+            <span
+              key={`${t}-${i}`}
+              className="whitespace-nowrap text-lg font-semibold text-white/35 transition hover:text-white/70"
+            >
+              {t}
+            </span>
+          ))}
         </div>
       </div>
     </section>

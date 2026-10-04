@@ -1,44 +1,55 @@
+import { profile } from '../data/portfolio'
+
+const socials = [
+  { label: 'GitHub', href: profile.github },
+  { label: 'Instagram', href: profile.instagram },
+  { label: 'Live site', href: profile.liveSite },
+]
+
+const stickers = ['✦ Code', 'Go', 'C++', 'React', 'Ship it', '✦ Learn']
+
 function Contact() {
   return (
-    <section
-      id="contact"
-      className="border-t border-white/10 px-6 py-28"
-    >
+    <footer className="px-6 pb-10 pt-4">
       <div className="mx-auto max-w-6xl">
-        <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">
-          Contact
-        </p>
+        {/* Sticker row */}
+        <div className="flex flex-wrap items-end gap-3 pb-6" aria-hidden="true">
+          {stickers.map((s, i) => (
+            <span
+              key={s}
+              className={`rounded-full px-4 py-2 text-xs font-bold uppercase tracking-wide ring-1 ring-white/10 ${
+                i % 3 === 0
+                  ? 'bg-[#3ed598] text-[#07181f]'
+                  : i % 3 === 1
+                    ? 'rotate-[-2deg] bg-white text-black'
+                    : 'rotate-[2deg] bg-[#0e2230] text-white'
+              }`}
+            >
+              {s}
+            </span>
+          ))}
+        </div>
 
-        <h2 className="mt-4 max-w-2xl text-4xl font-semibold tracking-tight md:text-6xl">
-          FIND ME.
-        </h2>
-
-        <p className="mt-6 max-w-xl leading-7 text-neutral-400">
-          You can find me through
-          the links below.
-        </p>
-
-        <div className="mt-9 flex flex-wrap gap-4">
-          <a
-            href="https://github.com/marcelynoanggara"
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-lg bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-neutral-200"
-          >
-            GitHub
-          </a>
-
-          <a
-            href="https://www.instagram.com/marchanggara?igsi=ZWtqdXgwdzZ2MmNh"
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-lg bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-neutral-200"
-          >
-            Instagram
-          </a>
+        <div className="flex flex-col gap-4 border-t border-white/10 pt-6 text-[13px] text-white/45 sm:flex-row sm:items-center sm:justify-between">
+          <p>
+            © {new Date().getFullYear()} {profile.name} — Built with React &amp; TypeScript.
+          </p>
+          <div className="flex flex-wrap gap-5">
+            {socials.map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition hover:text-[#8fe388]"
+              >
+                {s.label} ↗
+              </a>
+            ))}
+          </div>
         </div>
       </div>
-    </section>
+    </footer>
   )
 }
 

@@ -1,37 +1,82 @@
+import { useState } from 'react'
+import { profile } from '../data/portfolio'
+
+const links = [
+  { label: 'Home', href: '#home' },
+  { label: 'Works', href: '#works' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'About', href: '#about' },
+  { label: 'FAQ', href: '#faq' },
+]
+
 function Navbar() {
+  const [open, setOpen] = useState(false)
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-neutral-950/80 backdrop-blur-md">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a
-          href="#home"
-          className="text-lg font-semibold tracking-tight"
-        >
-          MARCEL PORTOFOLIO
+    <header className="fixed inset-x-0 top-4 z-50 px-4">
+      {/* Desktop / tablet pill */}
+      <nav className="mx-auto hidden max-w-3xl items-center justify-between gap-2 rounded-full border border-white/10 bg-[#0f2a33]/80 py-2 pl-6 pr-2 shadow-lg shadow-black/30 backdrop-blur-md md:flex">
+        <a href="#home" className="text-sm font-semibold tracking-tight text-white">
+          {profile.shortName}
+          <span className="text-[#8fe388]">.</span>
         </a>
+        <div className="flex items-center gap-1">
+          {links.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              className="rounded-full px-4 py-2 text-sm font-medium text-white/60 transition hover:bg-white/5 hover:text-white"
+            >
+              {l.label}
+            </a>
+          ))}
+        </div>
+        <a
+          href="#contact"
+          className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-black transition hover:bg-[#8fe388]"
+        >
+          Let&apos;s talk
+        </a>
+      </nav>
 
-        <div className="hidden items-center gap-8 text-sm text-neutral-400 md:flex">
-          <a
-            href="#about"
-            className="transition hover:text-white"
-          >
-            About
-          </a>
+      {/* Mobile bar */}
+      <nav className="mx-auto flex max-w-3xl items-center justify-between rounded-full border border-white/10 bg-[#0f2a33]/80 py-2 pl-6 pr-2 shadow-lg shadow-black/30 backdrop-blur-md md:hidden">
+        <a href="#home" className="text-sm font-semibold tracking-tight text-white">
+          {profile.shortName}
+          <span className="text-[#8fe388]">.</span>
+        </a>
+        <button
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          aria-label="Toggle menu"
+          aria-expanded={open}
+          className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-lg font-semibold text-black"
+        >
+          {open ? '×' : '≡'}
+        </button>
+      </nav>
 
-          <a
-            href="#projects"
-            className="transition hover:text-white"
-          >
-            Projects
-          </a>
-
+      {open && (
+        <div className="mx-auto mt-2 max-w-3xl rounded-3xl border border-white/10 bg-[#0f2a33]/95 p-3 backdrop-blur-md md:hidden">
+          {links.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              onClick={() => setOpen(false)}
+              className="block rounded-2xl px-4 py-3 text-sm font-medium text-white/80 transition hover:bg-white/5 hover:text-white"
+            >
+              {l.label}
+            </a>
+          ))}
           <a
             href="#contact"
-            className="transition hover:text-white"
+            onClick={() => setOpen(false)}
+            className="mt-2 block rounded-2xl bg-white px-4 py-3 text-center text-sm font-semibold text-black"
           >
-            Contact
+            Let&apos;s talk
           </a>
         </div>
-      </nav>
+      )}
     </header>
   )
 }

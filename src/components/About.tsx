@@ -2,7 +2,7 @@ import Reveal from './Reveal'
 import { profile } from '../data/portfolio'
 import { profileImg } from '../assets/profile'
 
-const facts = ['2nd year IT student', '7 GitHub repositories', 'React • Golang • C++ • Python']
+const facts = ['2nd year IT student', 'React • Golang • C++ • Python']
 
 function About() {
   return (
@@ -15,11 +15,11 @@ function About() {
           </h2>
           <p className="mt-6 text-base leading-8 text-[#9fb3ba]">
             I&apos;m an undergraduate Information Technology student at Telkom University Surabaya.
-            My days are split between coursework — programming, data structures, and software
-            development — and personal projects where I practice shipping real things to the web.
+            My days are split between coursework programming,and software
+            development and personal projects where I practice shipping real things to the web.
           </p>
           <p className="mt-4 text-base leading-8 text-[#9fb3ba]">
-            I like the full cycle: understanding a problem, building a simple solution, deploying it,
+            I like the full cycle : understanding a problem, building a simple solution, deploying it,
             and improving it in public on GitHub. That loop is how this portfolio, my QR generator,
             and my data analysis tool all came to life.
           </p>

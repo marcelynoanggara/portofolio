@@ -95,6 +95,24 @@ export const projects: Project[] = [
     bg: '#4a3a2f',
     visual: 'qr',
   },
+  {
+    number: '04',
+    brand: 'Learning Web',
+    year: '2026',
+    title: 'Learning Japanese',
+    description:
+      'An interactive web app for learning Japanese from zero to N1 — kana flashcards, kanji explorer, vocabulary search, and quizzes with audio examples.',
+    points: [
+      'Kana flashcards with audio playback',
+      'Kanji explorer, grammar search & quizzes',
+      'Progress saved locally in the browser',
+    ],
+    tech: ['JavaScript', 'HTML', 'CSS'],
+    liveUrl: 'https://marcelynoanggara.github.io/belajar-bahasa-jepang/',
+    repoUrl: 'https://github.com/marcelynoanggara/belajar-bahasa-jepang',
+    bg: '#6b3232',
+    visual: 'browser',
+  },
 ]
 
 export const services = [

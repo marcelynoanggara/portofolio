@@ -14,16 +14,11 @@ export const profile = {
 }
 
 export const techMarquee = [
-  'React',
-  'TypeScript',
   'Golang',
   'C++',
   'Python',
-  'Tailwind CSS',
   'Git & GitHub',
   'VS Code',
-  'Vite',
-  'Data Structures',
 ]
 
 export type Project = {
@@ -101,10 +96,10 @@ export const projects: Project[] = [
     year: '2026',
     title: 'Learning Japanese',
     description:
-      'An interactive web app for learning Japanese from zero to N1 — kana flashcards, kanji explorer, vocabulary search, and quizzes with audio examples.',
+      'An interactive web app for learning Japanese from zero — kana flashcards, kanji explorer, vocabulary search, and quizzes with audio examples.',
     points: [
       'Kana trainer with handwriting practice & auto-grading',
-      '30 modules from basics to JLPT N1',
+      '30 modules from basics to N1',
       'Configurable quizzes, progress saved locally',
     ],
     tech: ['JavaScript', 'HTML', 'CSS'],

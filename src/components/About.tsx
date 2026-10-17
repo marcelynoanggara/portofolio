@@ -11,17 +11,17 @@ function About() {
         <Reveal>
           <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#8fe388]">About me</p>
           <h2 className="mt-4 font-serif text-4xl font-medium leading-tight tracking-tight text-white md:text-[42px]">
-            Know who I am
+            A little about me
           </h2>
           <p className="mt-6 text-base leading-8 text-[#9fb3ba]">
-            I&apos;m an undergraduate Information Technology student at Telkom University Surabaya.
-            My days are split between coursework programming,and software
-            development and personal projects where I practice shipping real things to the web.
+            I&apos;m an undergraduate IT student at Telkom University Surabaya. Between
+            coursework and personal projects, most of my time goes into programming
+            and getting real things onto the web.
           </p>
           <p className="mt-4 text-base leading-8 text-[#9fb3ba]">
-            I like the full cycle : understanding a problem, building a simple solution, deploying it,
-            and improving it in public on GitHub. That loop is how this portfolio, my QR generator,
-            and my data analysis tool all came to life.
+            I like the full cycle: understanding a problem, building a simple solution, deploying it,
+            then improving it in public on GitHub. This portfolio, my QR generator, and my data
+            analysis tool all came out of that loop.
           </p>
 
           <div className="mt-7 flex flex-wrap gap-2.5">

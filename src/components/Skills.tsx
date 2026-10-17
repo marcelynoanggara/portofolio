@@ -6,12 +6,12 @@ function Skills() {
     <section id="skills" className="px-6 py-24 md:py-28">
       <div className="mx-auto max-w-6xl">
         <Reveal className="text-center">
-          <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#8fe388]">My services</p>
+          <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#8fe388]">Skills</p>
           <h2 className="mt-4 font-serif text-4xl font-medium tracking-tight text-white md:text-5xl">
             What I can do
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-[15px] leading-7 text-[#9fb3ba]">
-            A general IT &amp; software toolkit — built through coursework and shipped projects.
+            An IT and software toolkit, built through coursework and projects I actually shipped.
           </p>
         </Reveal>
 

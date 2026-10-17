@@ -19,8 +19,8 @@ function Faq() {
                   Have any more questions?
                 </h2>
                 <p className="mt-4 text-[15px] leading-7 text-[#9fb3ba]">
-                  The quick answers are on the right. For anything else, message me directly —
-                  I&apos;m a student, I read everything myself.
+                  The quick answers are on the right. For anything else, message me directly.
+                  I&apos;m a student; I read everything myself.
                 </p>
               </div>
               <div

@@ -4,10 +4,10 @@ export const profile = {
   initials: 'MA',
   role: 'Information Technology Student',
   university: 'Telkom University Surabaya',
-  headlineA: 'Welcome to my',
-  headlineB: 'digital home.',
+  headlineA: 'Welcome in,',
+  headlineB: 'have a look around.',
   intro:
-    "I'm Marcelyno Anggara, an Information Technology student at Telkom University Surabaya who enjoys building web projects, strengthening programming foundations, and turning ideas into working software.",
+    "I'm Marcelyno Anggara, an IT student at Telkom University Surabaya. I build web projects, drill programming fundamentals, and like turning an idea into something people can actually use.",
   github: 'https://github.com/marcelynoanggara',
   instagram: 'https://www.instagram.com/marchanggara',
   liveSite: 'https://marchanggara.my.id/',
@@ -42,11 +42,11 @@ export const projects: Project[] = [
     year: '2026',
     title: 'Personal Portfolio Website',
     description:
-      'A one-page portfolio to present my projects, skills, and learning journey — rebuilt with a dark, playful, premium look.',
+      'One page for my projects, skills, and how I learn. Rebuilt with a dark, playful design.',
     points: [
-      'Responsive one-page experience',
-      'Component-based React architecture',
-      'Automated deployment to GitHub Pages',
+      'Looks right on phone and desktop',
+      'Built from React components',
+      'Deploys to GitHub Pages on every push',
     ],
     tech: ['React', 'TypeScript', 'Tailwind CSS'],
     liveUrl: 'https://marchanggara.my.id/',
@@ -60,11 +60,11 @@ export const projects: Project[] = [
     year: '2026',
     title: 'AI Data Analyze',
     description:
-      'A CSV data analysis web application that uses AI to help provide insights and visualizations for better decision-making.',
+      'Upload a CSV and get AI-written summaries plus charts, so the numbers are easier to read.',
     points: [
-      'CSV-based data exploration',
-      'AI-assisted insight summaries',
-      'Visual output for faster decisions',
+      'Explore data straight from a CSV file',
+      'AI summaries of what the data says',
+      'Charts that make the takeaway obvious',
     ],
     tech: ['TypeScript', 'Python'],
     liveUrl: 'https://data-analyze-doy73sy5q-mangga2.vercel.app/',
@@ -78,11 +78,11 @@ export const projects: Project[] = [
     year: '2026',
     title: 'QR Generator',
     description:
-      'A simple web-based QR code generator that lets users create QR codes quickly and easily, right from the browser.',
+      'A QR code generator that runs entirely in the browser. Type, click, done.',
     points: [
-      'Instant QR code creation',
-      'Simple, focused workflow',
-      'Runs fully in the browser',
+      'QR codes in one click',
+      'One job, no clutter',
+      'Runs entirely in your browser',
     ],
     tech: ['React', 'TypeScript'],
     liveUrl: 'https://marcelynoanggara.github.io/qr-generator/',
@@ -96,11 +96,11 @@ export const projects: Project[] = [
     year: '2026',
     title: 'Learning Japanese',
     description:
-      'An interactive web app for learning Japanese from zero — kana flashcards, kanji explorer, vocabulary search, and quizzes with audio examples.',
+      'A web app for learning Japanese from zero. Kana flashcards, a kanji explorer, vocabulary search, and quizzes with audio examples.',
     points: [
-      'Kana trainer with handwriting practice & auto-grading',
+      'Practice writing kana by hand; the app grades it for you',
       '30 modules from basics to N1',
-      'Configurable quizzes, progress saved locally',
+      'Set up your own quizzes; progress stays in your browser',
     ],
     tech: ['JavaScript', 'HTML', 'CSS'],
     liveUrl: 'https://marcelynoanggara.github.io/belajar-bahasa-jepang/',
@@ -114,11 +114,11 @@ export const projects: Project[] = [
     year: '2026',
     title: 'CV Builder',
     description:
-      'An interactive resume maker with live A4 preview, switchable templates and fonts, PDF export, and automatic update prompts on new releases.',
+      'A resume maker with live A4 preview. Switch templates and fonts, export to PDF, and it tells you when a new version is out.',
     points: [
-      'Live A4 preview while editing',
-      'Templates, fonts & accent colors',
-      'PDF export with auto-update checks',
+      'The A4 page updates as you type',
+      'Templates, fonts, and accent colors',
+      'Export to PDF; the app checks for updates itself',
     ],
     tech: ['JavaScript', 'HTML', 'CSS'],
     liveUrl: 'https://marcelynoanggara.github.io/cv-builder/',
@@ -131,25 +131,25 @@ export const projects: Project[] = [
 export const services = [
   {
     title: 'Web Development',
-    desc: 'Building responsive, component-based interfaces with React, TypeScript, Vite, and Tailwind CSS — from landing pages to small web utilities.',
+    desc: 'Responsive, component-based interfaces with React, TypeScript, Vite, and Tailwind CSS. Landing pages to small web utilities.',
     tags: ['React', 'TypeScript', 'Tailwind CSS'],
     highlight: true,
   },
   {
     title: 'Programming Foundations',
-    desc: 'Strengthening problem-solving through C++, Golang, and Python coursework — data structures, algorithms, and clean, readable code.',
+    desc: 'Problem-solving through C++, Golang, and Python coursework. Data structures, algorithms, and code people can read.',
     tags: ['C++', 'Golang', 'Python'],
     highlight: false,
   },
   {
     title: 'Data & Analysis',
-    desc: 'Exploring how data becomes decisions: CSV exploration, AI-assisted insights, and clear visualizations that are easy to read.',
+    desc: 'Raw data into something readable: CSV exploration, AI-assisted insights, and clear charts.',
     tags: ['CSV Analysis', 'Visualization', 'AI Insights'],
     highlight: false,
   },
   {
     title: 'Tools & Workflow',
-    desc: 'Version control and an organized workflow with Git, GitHub, and VS Code — plus solid documentation with Microsoft Office.',
+    desc: 'Version control and an organized workflow with Git, GitHub, and VS Code, plus documentation in Microsoft Office.',
     tags: ['Git', 'GitHub', 'VS Code'],
     highlight: false,
   },
@@ -162,7 +162,7 @@ export const notes = [
   },
   {
     title: 'Foundations before frameworks',
-    desc: 'Data structures and algorithms first — frameworks change, problem-solving stays.',
+    desc: 'Data structures and algorithms first. Frameworks change; problem-solving stays.',
   },
   {
     title: 'Small tools, real problems',
@@ -181,7 +181,7 @@ export const principles = [
   },
   {
     title: 'Document the process',
-    desc: 'READMEs, commits, and notes make progress visible — and make the next step easier.',
+    desc: 'READMEs, commits, and notes make progress visible, and the next step easier.',
   },
   {
     title: 'Improve iteratively',
@@ -192,18 +192,18 @@ export const principles = [
 export const faqs = [
   {
     q: 'What are you studying?',
-    a: "I'm an undergraduate Information Technology student at Telkom University Surabaya, currently in my second year. My coursework focuses on programming, data structures, and software development.",
+    a: "I'm a second-year IT undergraduate at Telkom University Surabaya. My coursework is mostly programming, data structures, and software development.",
   },
   {
     q: 'What kind of projects do you build?',
-    a: 'Mostly web-based projects with React and TypeScript, small utilities like a QR generator, data analysis tools, and programming coursework in C++, Golang, and Python. Everything lives on my GitHub.',
+    a: 'Mostly web projects with React and TypeScript: small utilities like a QR generator, data analysis tools, plus coursework in C++, Golang, and Python. Everything is on my GitHub.',
   },
   {
     q: 'Are you open to collaboration?',
-    a: "Yes — I'm open to learning opportunities, collaboration on student projects, and discussing ideas around web development and software. The fastest way to reach me is through GitHub or Instagram.",
+    a: "Yes. I'm open to learning opportunities, student project collaborations, and talking about web development and software. The fastest way to reach me is GitHub or Instagram.",
   },
   {
     q: 'How can I see your code?',
-    a: 'All featured projects on this page link directly to their GitHub repositories, so you can read the source, check the commit history, and try the live versions.',
+    a: 'Every featured project links straight to its GitHub repo, so you can read the source, check the commit history, and try the live version.',
   },
 ]

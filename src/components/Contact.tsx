@@ -32,7 +32,7 @@ function Contact() {
 
         <div className="flex flex-col gap-4 border-t border-white/10 pt-6 text-[13px] text-white/45 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} {profile.name} — Built with React &amp; TypeScript.
+            © {new Date().getFullYear()} {profile.name}. Built with React and TypeScript.
           </p>
           <div className="flex flex-wrap gap-5">
             {socials.map((s) => (

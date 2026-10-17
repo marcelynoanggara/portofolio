@@ -8,10 +8,10 @@ function Notes() {
         <Reveal>
           <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#8fe388]">Thoughts</p>
           <h2 className="mt-4 font-serif text-4xl font-medium tracking-tight text-white md:text-5xl">
-            Notes from my learning journey
+            Notes on how I learn
           </h2>
           <p className="mt-4 max-w-xl text-[15px] leading-7 text-[#9fb3ba]">
-            Short reflections behind the projects — how I learn, and why I build the way I do.
+            Short reflections behind the projects. How I learn, and why I build the way I do.
           </p>
         </Reveal>
 

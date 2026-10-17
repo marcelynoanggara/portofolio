@@ -43,7 +43,7 @@ function ProjectVisual({ project }: { project: Project }) {
               <p className="text-[#8fe388]">struct Node {'{ int data; Node* next; }'};</p>
               <p className="text-white/60">void push(Node*&amp; head, int value) {'{'}</p>
               <p className="pl-4 text-white/80">head = new Node{'{value, head}'};</p>
-              <p className="text-white/60">{'}'} // O(1) — foundations first</p>
+              <p className="text-white/60">{'}'} // O(1): foundations first</p>
             </div>
           )}
           {project.visual === 'browser' && (
@@ -76,12 +76,12 @@ function Projects() {
     <section id="works" className="px-6 py-16 md:py-32">
       <div className="mx-auto max-w-6xl">
         <Reveal className="text-center">
-          <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#8fe388]">Curated work</p>
+          <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#8fe388]">Selected work</p>
           <h2 className="mt-4 font-serif text-3xl font-medium tracking-tight text-white md:text-5xl">
             Featured projects
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-[15px] leading-7 text-[#9fb3ba]">
-            Things I have built while learning — each one live, and each one readable on GitHub.
+            Things I built while learning. Every one is live, and the code is on GitHub.
           </p>
         </Reveal>
 

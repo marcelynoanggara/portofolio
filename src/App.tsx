@@ -8,10 +8,12 @@ import Principles from './components/Principles'
 import About from './components/About'
 import Faq from './components/Faq'
 import Contact from './components/Contact'
+import UpdateBanner from './components/UpdateBanner'
 
 function App() {
   return (
     <div className="min-h-screen bg-[#07181f] font-sans text-white">
+      <UpdateBanner />
       <Navbar />
       <main>
         <Hero />

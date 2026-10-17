@@ -3,10 +3,10 @@ import { projects, type Project } from '../data/portfolio'
 
 function ProjectVisual({ project }: { project: Project }) {
   return (
-    <div className="relative flex h-full min-h-[260px] items-center justify-center overflow-hidden p-6 md:p-8">
+    <div className="relative flex h-full min-h-[220px] items-center justify-center overflow-hidden p-6 md:min-h-[260px] md:p-8">
       <div className="dot-grid absolute inset-0 opacity-60" aria-hidden="true" />
       {/* Browser-style mockup */}
-      <div className="relative w-full max-w-md rotate-[-2deg] rounded-2xl bg-[#07181f]/90 shadow-2xl shadow-black/50 ring-1 ring-white/10 transition duration-500 group-hover:rotate-0">
+      <div className="relative w-full max-w-md rounded-2xl bg-[#07181f]/90 shadow-2xl shadow-black/50 ring-1 ring-white/10 transition duration-500 md:rotate-[-2deg] md:group-hover:rotate-0">
         <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3">
           <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
           <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
@@ -73,11 +73,11 @@ function ProjectVisual({ project }: { project: Project }) {
 
 function Projects() {
   return (
-    <section id="works" className="px-6 py-24 md:py-32">
+    <section id="works" className="px-6 py-16 md:py-32">
       <div className="mx-auto max-w-6xl">
         <Reveal className="text-center">
           <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#8fe388]">Curated work</p>
-          <h2 className="mt-4 font-serif text-4xl font-medium tracking-tight text-white md:text-5xl">
+          <h2 className="mt-4 font-serif text-3xl font-medium tracking-tight text-white md:text-5xl">
             Featured projects
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-[15px] leading-7 text-[#9fb3ba]">
@@ -89,15 +89,15 @@ function Projects() {
           {projects.map((project, idx) => (
             <article
               key={project.number}
-              className="group sticky overflow-hidden rounded-[28px] shadow-2xl shadow-black/40 ring-1 ring-white/10"
+              className="group overflow-hidden rounded-[28px] shadow-2xl shadow-black/40 ring-1 ring-white/10 md:sticky"
               style={{ top: `${88 + idx * 14}px`, background: project.bg }}
             >
               <div className="grid md:grid-cols-[45%_55%]">
-                <div className="flex flex-col justify-center p-8 md:p-10">
+                <div className="flex flex-col justify-center p-6 md:p-10">
                   <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#8fe388]">
                     {project.brand} • {project.year}
                   </p>
-                  <h3 className="mt-4 font-serif text-3xl font-medium leading-tight text-white md:text-[32px]">
+                  <h3 className="mt-4 font-serif text-2xl font-medium leading-tight text-white md:text-[32px]">
                     {project.title}
                   </h3>
                   <p className="mt-4 text-[15px] leading-7 text-white/70">{project.description}</p>
@@ -127,7 +127,7 @@ function Projects() {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-black transition hover:bg-[#8fe388]"
+                      className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-[#8fe388]"
                     >
                       View live ↗
                     </a>
@@ -135,7 +135,7 @@ function Projects() {
                       href={project.repoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="rounded-full border border-white/30 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10"
+                      className="rounded-full border border-white/30 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
                     >
                       GitHub
                     </a>

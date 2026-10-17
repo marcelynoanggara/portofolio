@@ -10,7 +10,7 @@ export const profile = {
     "I'm Marcelyno Anggara, an Information Technology student at Telkom University Surabaya who enjoys building web projects, strengthening programming foundations, and turning ideas into working software.",
   github: 'https://github.com/marcelynoanggara',
   instagram: 'https://www.instagram.com/marchanggara',
-  liveSite: 'https://marcelynoanggara.github.io/portofolio/',
+  liveSite: 'https://marchanggara.my.id/',
 }
 
 export const techMarquee = [
@@ -49,7 +49,7 @@ export const projects: Project[] = [
       'Automated deployment to GitHub Pages',
     ],
     tech: ['React', 'TypeScript', 'Tailwind CSS'],
-    liveUrl: 'https://marcelynoanggara.github.io/portofolio/',
+    liveUrl: 'https://marchanggara.my.id/',
     repoUrl: 'https://github.com/marcelynoanggara/portofolio',
     bg: '#43594f',
     visual: 'browser',

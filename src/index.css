@@ -15,6 +15,12 @@ html {
   scroll-behavior: smooth;
 }
 
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
 body {
   margin: 0;
   min-width: 320px;
